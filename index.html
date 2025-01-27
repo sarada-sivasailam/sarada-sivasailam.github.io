@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>☾</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="images/rose.gif">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
+  <style>
+    h2 {
+      font-family: 'JetBrains Mono';
+      font-size: 22px;
+    }
+
+    img {
+      border-radius: 50%;
+    }
+
+    .cloud-blurb {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: linear-gradient(to bottom, #e0f7fa, #b3e5fc);
+      border-radius: 50px;
+      padding: 10px 20px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 16px;
+      color: #03141a;
+      text-align: center;
+      text-decoration: none;
+      /* position: relative; */
+    }
+
+    .cloud-blurb a {
+      text-decoration: none;
+      color: #03141a;
+    }
+
+    body {
+      background-color: #a6c3cf;
+    }
+
+    .content {
+      max-width: 1000px;
+      margin: 50px auto;
+    }
+
+    .blurb {
+      margin-bottom: 20px;
+    }
+
+    .image-terminal-container {
+      display: flex;
+      align-items: flex-start;
+      gap: 40px;
+    }
+
+    .terminal {
+      background-color: #1e1e1e;
+      color: #ffffff;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 16px;
+      padding: 20px;
+      border-radius: 10px;
+      width: 70%;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .terminal-text {
+      white-space: pre-wrap;
+      overflow: hidden;
+    }
+
+    .centered-figure {
+  text-align: center; 
+  margin: 20px auto; 
+}
+
+.centered-figure img {
+  display: inline-block; 
+  max-width: 100%;
+  height: auto; 
+  margin: 0 auto; 
+}
+
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="#top">Home</a></li>
+      <li><a href="/pages/linguistics.html">Linguistics</a></li>
+      <li><a href="/pages/writing.html">Writing</a></li>
+      <li><a href="/pages/code.html">Code</a></li>
+      <li><a href="/pages/blogs/blog.html">Blog</a></li>
+      <li><a href="/pages/featured.html">Featured</a></li>
+    </ul>
+  </nav>
+  <div class="cloud-blurb">
+    <a href="/pages/blogs/mit.html">Latest Blog Post!</a>
+  </div>
+  <div class="content">
+    <div class="blurb">
+      <h1><u>h</u>i, i'<u>m</u> jaide<u>n</u>!</h1>
+      <div style="display:inline;">
+        <span>
+          <a href="https://github.com/jaiden-li">
+            <img src="images/github logo.png" width="30" height="30" alt="GitHub Logo">
+          </a>
+          <a href="https://www.linkedin.com/in/jaiden-li/">
+            <img src="images/linkedin_logo.png" width="30" height="30" alt="LinkedIn Logo">
+          </a>
+          <a href="https://www.youtube.com/@dreampenjaiden">
+            <img src="images/youtube_logo.png" width="30" height="30" alt="YouTube Logo">
+          </a>
+          <a href="https://medium.com/@dreampenjaiden">
+            <img src="images/medium.png" width="32" height="32" alt="Medium Logo">
+          </a>
+          <a href="https://dreamingalias.com/pages/writing.html">
+            <img src="images/8ball.png" width="30" height="30" alt="Random Page">
+          </a>
+        </span>
+      </div>
+      <h2>'programmic' linguistics nut. writer with a heart of gold. coined the phrase 'manic pixie dream girl' in another life, probably.</h2>
+      <p>do first, think later.</p>
+      <br>
+    </div>
+    <div class="image-terminal-container">
+      <img class="square" src="images/jaiden.png" alt="Profile Picture" width="200px">
+      <div class="terminal">
+        <div class="terminal-text" id="terminal-text"></div>
+      </div>
+    </div>
+  </div>
+  <figure class="centered-figure">
+    <img class="square" src="images/dreams.png" alt="dreaming alias">
+  </figure>
+  <footer>
+    <ul>
+      <li><a href="mailto:dreampenjaiden@gmail.com">Email Me!</a></li>
+    </ul>
+  </footer>
+  <script>
+    const text = `===INITIALIZING===
+hi, i'm jaiden (李梦安)!
+      
+i'm a current high school senior with an appreciation for languages of both the human and non-human variety. i have a debilitating love of math, physics, and anything that makes me drunk on living. 
+      
+here are some fun facts about me!
+  - birthplace: Qingdao, China
+  - favorite word: manifestante (protestor, female)
+  - favorite neurological condition: Synesthesia
+  - favorite K-POP group: NewJeans (or should I say NewJeanz?)
+  - currently learning: Japanese, Korean
+  - current fixations: causality, memes and their role in information theory, poker.
+  - DNMOIWRFD (Do Not Mention or I Will Ramble for Days): meritocracy in college admissions, bilingual education in China, North Korea's linguistic experiment
+
+ =====TERMINATING====
+    `;
+    let i = 0;
+    const speed = 100; 
+    const terminalText = document.getElementById("terminal-text");
+
+    function typeWriter() {
+      if (i < text.length) {
+        terminalText.textContent += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+      }
+    }
+
+    window.onload = typeWriter;
+  </script>
+</body>
+</html>
