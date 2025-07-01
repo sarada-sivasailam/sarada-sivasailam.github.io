@@ -30,7 +30,7 @@ body {
 .desk {
   position: relative;
   height: 100vh;
-  background: url('assets/wallpaper.jpg') no-repeat center/cover;
+  background: url('wallpaper.jpg') no-repeat center/cover;
   display: flex;
   justify-content: center;
   align-items: flex-end;
