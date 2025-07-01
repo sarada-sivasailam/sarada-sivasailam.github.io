@@ -1,41 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sarada's Desk</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Patrick+Hand&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Cozy Desktop</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
   <div class="desk">
-    <div class="object laptop" onclick="openProject('https://linktr.ee/sarada.sivasailam')">
-      <div class="screen">
-        <p>click me for code</p>
+    <div class="computer" id="computer">
+      <div class="light-dark-toggle" onclick="toggleMode()">Toggle Mode</div>
+      <div class="icons">
+        <div class="icon" onclick="openWindow('about')">
+          <img src="https://img.icons8.com/color/96/about.png" alt="About" />
+          <p>About</p>
+        </div>
+        <div class="icon" onclick="openWindow('projects')">
+          <img src="https://img.icons8.com/color/96/folder-invoices.png" alt="Projects" />
+          <p>Projects</p>
+        </div>
+        <div class="icon" onclick="openWindow('resume')">
+          <img src="https://img.icons8.com/color/96/resume.png" alt="Resume" />
+          <p>Resume</p>
+        </div>
       </div>
-      <div class="keyboard"></div>
-    </div>
 
-    <div class="object notebook" onclick="openPage('blog.html')">
-      <div class="cover">my thoughts</div>
-      <div class="pages"></div>
-    </div>
+      <div class="window" id="about">
+        <div class="window-header">
+          <span>About Me</span>
+          <div class="buttons">
+            <span onclick="closeWindow('about')"></span>
+          </div>
+        </div>
+        <div class="window-content">
+          <p>Hi, I'm a UTSA student and creative technologist. Welcome to my virtual desktop!</p>
+        </div>
+      </div>
 
-    <div class="object sticky" onclick="openLink('https://instagram.com/sarada.sivasailam')">
-      <p>post drop 🌸</p>
-    </div>
+      <div class="window" id="projects">
+        <div class="window-header">
+          <span>Projects</span>
+          <div class="buttons">
+            <span onclick="closeWindow('projects')"></span>
+          </div>
+        </div>
+        <div class="window-content">
+          <ul>
+            <li>🌼 Cozy To-Do App</li>
+            <li>📁 Virtual Desktop Site</li>
+            <li>🎨 Portfolio Mini Game</li>
+          </ul>
+        </div>
+      </div>
 
-    <div class="object paper" onclick="openPage('skills.html')">
-      <h2>Skills</h2>
-      <ul>
-        <li>✨ HTML / CSS / JS</li>
-        <li>🎨 Figma / Branding</li>
-        <li>⚙️ Web Dev Teaching</li>
-      </ul>
+      <div class="window" id="resume">
+        <div class="window-header">
+          <span>Resume</span>
+          <div class="buttons">
+            <span onclick="closeWindow('resume')"></span>
+          </div>
+        </div>
+        <div class="window-content">
+          <p><a href="#">Download Resume (PDF)</a></p>
+        </div>
+      </div>
+
+      <div class="music-player" onclick="openSpotify()">
+        <img src="https://img.icons8.com/color/48/spotify--v1.png" alt="Music" />
+      </div>
     </div>
   </div>
-
   <script src="script.js"></script>
 </body>
 </html>
