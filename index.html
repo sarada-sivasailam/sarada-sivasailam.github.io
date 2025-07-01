@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>☾</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="images/rose.gif">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
+  <style>
+    h2 {
+      font-family: 'JetBrains Mono';
+      font-size: 22px;
+    }
+
+    img {
+      border-radius: 50%;
+    }
+
+    .cloud-blurb {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: linear-gradient(to bottom, #e0f7fa, #b3e5fc);
+      border-radius: 50px;
+      padding: 10px 20px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 16px;
+      color: #03141a;
+      text-align: center;
+      text-decoration: none;
+      /* position: relative; */
+    }
+
+    .cloud-blurb a {
+      text-decoration: none;
+      color: #03141a;
+    }
+
+    body {
+      background-color: #a6c3cf;
+    }
+
+    .content {
+      max-width: 1000px;
+      margin: 50px auto;
+    }
+
+    .blurb {
+      margin-bottom: 20px;
+    }
+
+    .image-terminal-container {
+      display: flex;
+      align-items: flex-start;
+      gap: 40px;
+    }
+
+    .terminal {
+      background-color: #1e1e1e;
+      color: #ffffff;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 16px;
+      padding: 20px;
+      border-radius: 10px;
+      width: 70%;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .terminal-text {
+      white-space: pre-wrap;
+      overflow: hidden;
+    }
+
+    .centered-figure {
+  text-align: center; 
+  margin: 20px auto; 
+}
+
+.centered-figure img {
+  display: inline-block; 
+  max-width: 100%;
+  height: auto; 
+  margin: 0 auto; 
+}
+
+.photo-wall {
+  margin: 60px auto;
+  text-align: center;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.photo-wall-title {
+  font-size: 30px;
+  margin-bottom: 30px;
+  color: #3d3d3d;
+}
+
+.photo-line {
+  display: flex;
+  overflow-x: auto;
+  padding: 20px 0;
+  gap: 40px;
+  justify-content: center;
+}
+
+.photo-card {
+  background: transparent;
+  width: 200px;
+  height: 260px;
+  perspective: 1000px;
+}
+
+.photo-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+
+.photo-card:hover .photo-inner,
+.photo-card:active .photo-inner {
+  transform: rotateY(180deg);
+}
+
+.photo-front, .photo-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  backface-visibility: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.photo-front img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.photo-front {
+  background-color: #eaf3f5;
+}
+
+.photo-back {
+  background-color: #fefae0;
+  color: #333;
+  transform: rotateY(180deg);
+  font-size: 14px;
+  text-align: center;
+  padding: 20px;
+  line-height: 1.4;
+}
+
+
+.photo-item img {
+  width: 200px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.photo-item::before {
+  content: "";
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 30px;
+  background: #a67c52;
+  clip-path: polygon(50% 0%, 100% 100%, 0 100%);
+}
+
+.hanger-wrapper {
+  position: relative;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-bottom: -20px;
+  z-index: 2;
+}
+
+.hanger-image {
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
+  pointer-events: none;
+  user-select: none;
+}
+
+.photo-card {
+  background: transparent;
+  width: 200px;
+  height: 260px;
+  perspective: 1000px;
+  position: relative; /* For hanging line */
+}
+
+.photo-card::before {
+  content: '';
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 60px;
+  background-color: #a67c52;
+  z-index: -1;
+}
+
+
+
+  </style>
+</head>
+<body>
+<div id="navbar-placeholder"></div>
+<script src="/navbar.js"></script>
+
+
+  <div class="content">
+    <div class="blurb">
+      <h1><u>h</u>i, i'<u>m</u> jaide<u>n</u>!</h1>
+      <div style="display:inline;">
+        <span>
+          <a href="https://github.com/jaiden-li">
+            <img src="images/github logo.png" width="30" height="30" alt="GitHub Logo">
+          </a>
+          <a href="https://www.linkedin.com/in/jaiden-li/">
+            <img src="images/linkedin_logo.png" width="30" height="30" alt="LinkedIn Logo">
+          </a>
+          <a href="https://www.youtube.com/@dreampenjaiden">
+            <img src="images/youtube_logo.png" width="30" height="30" alt="YouTube Logo">
+          </a>
+          <a href="https://medium.com/@dreampenjaiden">
+            <img src="images/medium.png" width="32" height="32" alt="Medium Logo">
+          </a>
+          <a href="https://dreamingalias.com/pages/writing.html">
+            <img src="images/8ball.png" width="30" height="30" alt="Random Page">
+          </a>
+        </span>
+      </div>
+      <h2>'programmic' linguistics nut. writer with a heart of gold. coined the phrase 'manic pixie dream girl' in another life, probably.</h2>
+      <p>do first, think later.</p>
+      <br>
+    </div>
+    <div class="image-terminal-container">
+      <img class="square" src="images/jaiden.png" alt="Profile Picture" width="200px">
+      <div class="terminal">
+        <div class="terminal-text" id="terminal-text"></div>
+      </div>
+    </div>
+  </div>
+<div class="photo-wall">
+    <div class="hanger-wrapper">
+    <img src="images/photo_string.png" class="hanger-image" alt="Photo Hanger">
+  </div>
+  <div class="photo-line">
+    <div class="photo-card">
+      <div class="photo-inner">
+        <div class="photo-front">
+          <img src="images/dreams.png" alt="Dreams">
+        </div>
+        <div class="photo-back">
+          <p>a collection of dreams i can’t recall 🌙</p>
+        </div>
+      </div>
+    </div>
+    <div class="photo-card">
+      <div class="photo-inner">
+        <div class="photo-front">
+          <img src="images/sunset_vertical.png" alt="Sunset">
+        </div>
+        <div class="photo-back">
+          <p>somewhere between day and night</p>
+        </div>
+      </div>
+    </div>
+    <div class="photo-card">
+      <div class="photo-inner">
+        <div class="photo-front">
+          <img src="images/bookclouds.png" alt="Books & Clouds">
+        </div>
+        <div class="photo-back">
+          <p>stories that shape the sky</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <footer>
+    <ul>
+      <li><a href="mailto:dreampenjaiden@gmail.com">Email Me!</a></li>
+    </ul>
+  </footer>
+  <script>
+    const text = `===INITIALIZING===
+hi, i'm jaiden (李梦安)!
+      
+i'm a recently graduated high school senior with an appreciation for languages of both the human and non-human variety. i have a debilitating love of math, physics, and anything that makes me drunk on living. 
+      
+here are some fun facts about me!
+  - birthplace: Qingdao, China
+  - favorite word: manifestante (protestor, female)
+  - favorite neurological condition: Synesthesia
+  - favorite K-POP group: NewJeans (or should I say NewJeanz?)
+  - currently learning: Japanese, Korean
+  - current fixations: causality, memes and their role in information theory, poker.
+  - DNMOIWRFD (Do Not Mention or I Will Ramble for Days): meritocracy in college admissions, bilingual education in China, North Korea's linguistic experiment
+
+ =====TERMINATING====
+    `;
+    let i = 0;
+    const speed = 100; 
+    const terminalText = document.getElementById("terminal-text");
+
+    function typeWriter() {
+      if (i < text.length) {
+        terminalText.textContent += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+      }
+    }
+
+    window.onload = typeWriter;
+  </script>
+</body>
+</html>
