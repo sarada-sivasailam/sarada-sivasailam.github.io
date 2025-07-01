@@ -2,48 +2,36 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Sarada’s Desk</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sarada's Desk</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&family=Patrick+Hand&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Patrick+Hand&display=swap" rel="stylesheet">
 </head>
 <body>
+  <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
   <div class="desk">
-
-    <!-- Desk Surface -->
-    <div class="desk-surface"></div>
-
-    <!-- Laptop -->
-    <div class="laptop tilt" onclick="openProject('https://linktr.ee/sarada.sivasailam')">
-      <div class="screen">💻<span>Projects</span></div>
-      <div class="base"></div>
-    </div>
-
-    <!-- Notepad -->
-    <div class="notepad tilt" onclick="openPage('blog.html')">
-      <div class="lines">
-        <p>dear diary,</p>
-        <p>click me for blog!</p>
+    <div class="object laptop" onclick="openProject('https://github.com/your-repo')">
+      <div class="screen">
+        <p>click me for code</p>
       </div>
+      <div class="keyboard"></div>
     </div>
 
-    <!-- Sticky Note -->
-    <div class="sticky-note" onclick="openLink('https://instagram.com/sarada.sivasailam')">
-      <p>✨ new post ✨</p>
+    <div class="object notebook" onclick="openPage('blog.html')">
+      <div class="cover">my thoughts</div>
+      <div class="pages"></div>
     </div>
 
-    <!-- Skills Sheet -->
-    <div class="paper-sheet" onclick="openPage('skills.html')">
-      <h3>Skills</h3>
+    <div class="object sticky" onclick="openLink('https://instagram.com/youraccount')">
+      <p>post drop 🌸</p>
+    </div>
+
+    <div class="object paper" onclick="openPage('skills.html')">
+      <h2>Skills</h2>
       <ul>
-        <li>💻 HTML, CSS, JS</li>
-        <li>🎨 Design Systems</li>
-        <li>🧠 Creative Strategy</li>
+        <li>✨ HTML / CSS / JS</li>
+        <li>🎨 Figma / Branding</li>
+        <li>⚙️ Web Dev Teaching</li>
       </ul>
     </div>
-
   </div>
-
-  <script src="script.js"></script>
-</body>
-</html>
