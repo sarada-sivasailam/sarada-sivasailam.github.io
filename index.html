@@ -5,24 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My Cozy Desktop</title>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <audio id="bootSound" src="sounds/boot.mp3"></audio>
+  <audio id="clickSound" src="sounds/click.mp3"></audio>
+
   <div class="desk">
     <div class="computer" id="computer">
-      <div class="light-dark-toggle" onclick="toggleMode()">Toggle Mode</div>
+      <div class="light-dark-toggle" onclick="playClick(); toggleMode()">Toggle Mode</div>
       <div class="icons">
-        <div class="icon" onclick="openWindow('about')">
-          <img src="https://img.icons8.com/color/96/about.png" alt="About" />
+        <div class="icon" onclick="playClick(); openWindow('about')">
+          <img src="https://img.icons8.com/office/80/about.png" alt="About" />
           <p>About</p>
         </div>
-        <div class="icon" onclick="openWindow('projects')">
-          <img src="https://img.icons8.com/color/96/folder-invoices.png" alt="Projects" />
-          <p>Projects</p>
+        <div class="icon" onclick="playClick(); openWindow('studybutterfly')">
+          <img src="https://img.icons8.com/fluency/48/folder-invoices.png" alt="StudyButterfly" />
+          <p>StudyButterfly</p>
         </div>
-        <div class="icon" onclick="openWindow('resume')">
-          <img src="https://img.icons8.com/color/96/resume.png" alt="Resume" />
-          <p>Resume</p>
+        <div class="icon" onclick="playClick(); openWindow('datasci')">
+          <img src="https://img.icons8.com/fluency/48/folder-invoices.png" alt="Data Science" />
+          <p>Data Science</p>
+        </div>
+        <div class="icon" onclick="playClick(); openWindow('cybersec')">
+          <img src="https://img.icons8.com/fluency/48/folder-invoices.png" alt="Cybersecurity" />
+          <p>Cybersecurity</p>
         </div>
       </div>
 
@@ -38,39 +45,65 @@
         </div>
       </div>
 
-      <div class="window" id="projects">
+      <div class="window" id="studybutterfly">
         <div class="window-header">
-          <span>Projects</span>
+          <span>📁 StudyButterfly</span>
           <div class="buttons">
-            <span onclick="closeWindow('projects')"></span>
+            <span onclick="closeWindow('studybutterfly')"></span>
           </div>
         </div>
         <div class="window-content">
           <ul>
-            <li>🌼 Cozy To-Do App</li>
-            <li>📁 Virtual Desktop Site</li>
-            <li>🎨 Portfolio Mini Game</li>
+            <li><a href="https://studybutterfly100.wixsite.com/blogmystudies" target="_blank">Blog</a> – personal academic reflections</li>
+            <li><a href="https://www.youtube.com/@sincerely.studybutterfly" target="_blank">YouTube</a> – study content and vlogs</li>
+            <li><a href="https://open.spotify.com/show/5cc6igoODxzm5A9yAdPzPA" target="_blank">Podcast</a> – "Serendipity With StudyButterfly" series</li>
+            <li><a href="https://www.instagram.com/sincerely.studybutterfly/" target="_blank">Instagram</a> – aesthetic academic updates</li>
           </ul>
         </div>
       </div>
 
-      <div class="window" id="resume">
+      <div class="window" id="datasci">
         <div class="window-header">
-          <span>Resume</span>
+          <span>📁 Data Science</span>
           <div class="buttons">
-            <span onclick="closeWindow('resume')"></span>
+            <span onclick="closeWindow('datasci')"></span>
           </div>
         </div>
         <div class="window-content">
-          <p><a href="#">Download Resume (PDF)</a></p>
+          <ul>
+            <li><a href="https://public.tableau.com/app/profile/sarada.varshini.sivasailam/viz/TheGraduationEquation/Dashboard1" target="_blank">Graph</a> – Tableau project on graduation metrics</li>
+          </ul>
         </div>
       </div>
 
-      <div class="music-player" onclick="openSpotify()">
+      <div class="window" id="cybersec">
+        <div class="window-header">
+          <span>📁 Cybersecurity</span>
+          <div class="buttons">
+            <span onclick="closeWindow('cybersec')"></span>
+          </div>
+        </div>
+        <div class="window-content">
+          <ul>
+            <li><a href="https://docs.google.com/spreadsheets/d/1Zp1WQdzOnRDd_OxPndSSjDxMGmie7yURr62-kEaNZxU/edit?usp=sharing" target="_blank">Sheets</a> – Vulnerability mapping spreadsheet</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="music-player" onclick="playClick(); openSpotify()">
         <img src="https://img.icons8.com/color/48/spotify--v1.png" alt="Music" />
       </div>
     </div>
   </div>
+
   <script src="script.js"></script>
+  <script>
+    window.addEventListener("load", () => {
+      const bootSound = document.getElementById("bootSound");
+      if (bootSound) {
+        bootSound.play().catch(() => {});
+      }
+    });
+  </script>
 </body>
 </html>
