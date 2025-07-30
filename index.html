@@ -64,49 +64,44 @@
         </div>
       </div>
 
-      <div class="window" id="journalism">
-        <div class="window-header">
-          <span>📁 Journalism</span>
-          <div class="buttons">
-            <span onclick="closeWindow('journalism')"></span>
-          </div>
-        </div>
-        <div class="window-content">
-          <ul>
-            <li><a <div class="window" id="csxart">
-        <div class="window-header">
-          <span>📁 Computer Science X Art</span>
-          <div class="buttons">
-            <span onclick="closeWindow('csxart')"></span>
-          </div>
-        </div>
-        <div class="window-content">
-          <ul>
-            <li><a href="https://open.spotify.com/episode/4Cp46bvsQbnop6dLBaePhn" target="_blank">The Intersection of Computer Science & Art</a> – Where Creativity Meets Code: Why the Art + CS Blend Matters More Than Ever
-By Sarada Sivasailam
+      <div id="journalism" class="popup">
+    <h2>Journalism</h2>
+    <ul>
+      <li><a href="#" onclick="openArticle('balance')">Balance not Burnout</a></li>
+      <li><a href="#" onclick="openArticle('csxart')">Computer Science X Art</a></li>
+      <li><a href="#" onclick="openArticle('confidence')">Coding + Confidence</a></li>
+    </ul>
+    <button onclick="closePopup('journalism')">Close</button>
+  </div>
 
-In a world that often asks students to pick a side—left brain or right, logic or imagination—the intersection of computer science and art is becoming not just relevant, but essential.
+  <div id="article" class="popup">
+    <h2 id="article-title"></h2>
+    <p id="article-content"></p>
+    <button onclick="closePopup('article')">Close</button>
+  </div>
 
-At first glance, CS and art seem like polar opposites: one rooted in algorithms and precision, the other in emotion and expression. But dig a little deeper, and you’ll find something magical happens when the two collide.
+  <script>
+    const articles = {
+      balance: {
+        title: "Balance not Burnout",
+        content: "In a world that glorifies hustle culture, finding a moment to pause is an act of rebellion. This piece explores how students can prioritize balance, design their days around wellness, and redefine success by how they feel—not how much they achieve."
+      },
+      csxart: {
+        title: "Computer Science X Art",
+        content: "The intersection of logic and creativity is where the real magic happens. From generative design to interactive installations, discover how coding and artistry are no longer separate spheres—but co-creators of the future."
+      },
+      confidence: {
+        title: "Coding + Confidence",
+        content: "This article tells the story of how learning to code transformed my sense of self. We dive into how technology education empowers young women and helps them see themselves as builders, not just users, of the digital world."
+      }
+    };
 
-From generative art that transforms data into visual storytelling, to UI/UX design that blends empathy with engineering, the most impactful tech products today are created by those who understand both pixels and Python. It’s no longer enough to just build things that work; they have to feel good, look good, and mean something, too.
-
-For students like me—and maybe you—who find themselves sketching interfaces during coding lectures or dreaming up color palettes while debugging Java, this space is home. It’s where ideas bloom with both structure and soul.
-
-And it’s not just about career paths. This intersection is changing how we tell stories, how we connect communities, and how we bring visions to life. Whether it’s designing an app to reduce food waste or building an interactive installation that responds to sound, the fusion of art and tech is shaping a future that’s not just efficient, but human.
-
-If any of this resonates with you, or you’re curious about what it looks like in real life, go check out the latest episode of my podcast, Serendipity with Studybutterfly, where I talk with Rebekah Butler—a CS and art double major and current UI/UX intern—about how she’s navigating both worlds. We cover identity, impact, design thinking, and the beauty of being more than one thing.
-</li>
-            <li><a href="https://www.youtube.com/@sincerely.studybutterfly" target="_blank">YouTube</a> – study content and vlogs</li>
-            <li><a href="https://open.spotify.com/show/5cc6igoODxzm5A9yAdPzPA" target="_blank">Podcast</a> – "Serendipity With StudyButterfly" series</li>
-          </ul>
-        </div>
-      </div></li>
-            <li><a href="https://www.youtube.com/@sincerely.studybutterfly" target="_blank">YouTube</a> – study content and vlogs</li>
-            <li><a href="https://open.spotify.com/show/5cc6igoODxzm5A9yAdPzPA" target="_blank">Podcast</a> – "Serendipity With StudyButterfly" series</li>
-          </ul>
-        </div>
-      </div>
+    function openArticle(key) {
+      document.getElementById('article-title').innerText = articles[key].title;
+      document.getElementById('article-content').innerText = articles[key].content;
+      closePopup('journalism');
+      openPopup('article');
+    }
 
       <div class="window" id="datasci">
         <div class="window-header">
